@@ -1,32 +1,86 @@
 import React from 'react';
 
 const Layout = () => {
+    const containerStyle = {
+        display: 'flex',
+        height: '100vh',
+        padding: '10px',
+    };
+
+    const borderStyle = {
+        border: '4px solid #4CAF50', // Thick border
+        borderRadius: '15px', // Rounded corners
+        boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', // Glossy effect
+    };
+
+    const leftSectionStyle = {
+        ...borderStyle,
+        display: 'flex',
+        flexDirection: 'column',
+        width: '20%',
+        padding: '10px',
+    };
+
+    const buttonStyle = {
+        ...borderStyle,
+        margin: '5px 0',
+        padding: '10px',
+        textAlign: 'center',
+        backgroundColor: '#e0f7fa', // Light glossy background
+        cursor: 'pointer',
+    };
+
+    const textAreaStyle = {
+        ...borderStyle,
+        flex: 1,
+        marginTop: '10px',
+        padding: '10px',
+        backgroundColor: '#e0f7fa',
+    };
+
+    const topButtonSectionStyle = {
+        ...borderStyle,
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '80%',
+        padding: '10px',
+        marginLeft: '10px',
+        backgroundColor: '#e0f7fa',
+    };
+
+    const graphAreaStyle = {
+        ...borderStyle,
+        flex: 1,
+        marginLeft: '10px',
+        padding: '10px',
+        backgroundColor: '#ffffff',
+    };
+
     return (
-        <div style={{ display: 'flex', height: '100vh', padding: '10px' }}>
+        <div style={containerStyle}>
             {/* Left Section */}
-            <div style={{ display: 'flex', flexDirection: 'column', width: '20%' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <div style={{ width: '45%' }}>
-                        <div>Choose 1</div>
-                        <div>Choose 2</div>
-                        <div>Choose 3</div>
-                    </div>
-                    <div style={{ width: '45%' }}>
-                        <div>Option 1</div>
-                        <div>Option 2</div>
-                        <div>Option 3</div>
-                        <div>Option 4</div>
-                    </div>
-                </div>
-                <div style={{ flex: 1, border: '1px solid #ccc', marginTop: '10px' }}>
-                    {/* Empty space for data */}
+            <div style={leftSectionStyle}>
+                <div style={buttonStyle}>Button 1</div>
+                <div style={buttonStyle}>Button 2</div>
+                <div style={buttonStyle}>Button 3</div>
+                <div style={buttonStyle}>Button 4</div>
+                <div style={textAreaStyle}>
+                    {/* Text Area */}
+                    Text Area
                 </div>
             </div>
 
+            {/* Top Buttons */}
+            <div style={topButtonSectionStyle}>
+                <div style={buttonStyle}>P1 Button</div>
+                <div style={buttonStyle}>P2 Button</div>
+                <div style={buttonStyle}>P3 Button</div>
+            </div>
+
             {/* Graph Area */}
-            <div style={{ flex: 1, marginLeft: '10px', border: '1px solid #ccc' }}>
+            <div style={graphAreaStyle}>
                 {/* Graph Area */}
-                <h3 style={{ textAlign: 'center', marginTop: '50%' }}>Graph Area</h3>
+                <h3 style={{ textAlign: 'center', marginTop: '20%' }}>Graph Area</h3>
             </div>
         </div>
     );
